@@ -22,4 +22,4 @@ function bubbleSort(arr) {
   return sortedArr;
 }
 
-console.log(bubbleSort(numbers));
+bubbleSort(numbers);
