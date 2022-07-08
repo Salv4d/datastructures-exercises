@@ -13,7 +13,7 @@ function merge(arr1, arr2) {
 
       helper(arr1, arr2.slice(1))
     }
-
+    
   }
 
   helper(arr1, arr2)
@@ -21,4 +21,12 @@ function merge(arr1, arr2) {
   return result
 }
 
-console.log(mergeArray([1, 10, 50], [2, 14, 99, 100, 300]));
+function mergeSort(arr) {
+  let mid = Math.floor(arr.length / 2)
+  
+  if (arr.length <= 1) return arr
+
+  return merge(mergeSort(arr.slice(0, mid)), mergeSort(arr.slice(mid)))
+}
+
+console.log(mergeSort([1, 10, 50, 2, 14, 99, 100, 300]));
